@@ -1,0 +1,445 @@
+.hero{
+  background-color: #1C1C1C;
+  @include pad{
+    padding: 80px 0 67px 0;
+  }
+  &-banner{
+    padding: 85px 0;
+    background-image: url(../images/bg_home_mobile.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include pad{
+      padding: 127px 0 138px 0;
+      background-image: url(../images/bg_home.jpg);
+    }
+  }
+}
+.hero-text{
+  width: 100%;
+  position: relative;
+  padding: 32px 0;
+  color: $white;
+  background-color: #202020;
+  border: 1px solid $white;
+  @include pad{
+    width: 50%;
+    margin: 0 auto;
+  }
+  .text-deco{
+    width: 10px;
+    height: 10px;
+    background-color: $white;
+    position: absolute;
+  }
+  h2{
+    font-size: 24px;
+    line-height: 35px;
+    @include pad{
+      font-size: 48px;
+      line-height: 70px;
+    }
+  }
+  p{
+    font-size: 14px;
+    line-height: 20px;
+    @include pad{
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+}
+.gradient-custom{
+  background-image: linear-gradient(104deg, #62DB54, #09ACF5);
+}
+.gradient-text{
+  background-image: linear-gradient(180deg, #62DB54, #09ACF5);
+  background-clip: text;
+  color: transparent;
+}
+.h-deco{
+  position: relative;
+  font-size: 24px;
+  line-height: 35px;
+  &::after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: $primary;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    @include pad{
+      left: 0;
+      transform: translateX(0%);
+    }
+  }
+  @include pad{
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+.h-deco2{
+  position: relative;
+  font-size: 24px;
+  line-height: 35px;
+  &::after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: $primary;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+  }
+  @include pad{
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+.h-deco3{
+  position: relative;
+  font-size: 24px;
+  line-height: 35px;
+  &::after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: $primary;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+  }
+  @include pad{
+    font-size: 28px;
+    line-height: 40px;
+    &::after{
+      left: 0;
+      transform: translateX(0%);
+      background-color: $white;
+    }
+    
+  }
+}
+.h-wrap{
+  width: 216px;
+  margin: 0 auto;
+  @include pad{
+    width: 100%;
+  }
+}
+.fs-50{
+  font-size: 50px;
+}
+.hand-item{
+  background-color: #202020;
+  position: relative;
+  span{
+    background-image: linear-gradient(180deg, #62DB54, #09ACF5);
+    background-clip: text;
+    color: transparent;
+  }
+  @include pad{
+    background-color: #2D2D2D;
+    span{
+      background-image: linear-gradient(180deg, $white, $white);
+    }
+    &:hover{
+      background-color: #202020;
+      transition: all .5s;
+      span{
+        background-image: linear-gradient(180deg, #62DB54, #09ACF5);
+      }
+      ::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border: 1px solid #62DB54;
+        border-radius: 12px;
+      }
+    }
+  }
+}
+.h-process{
+  color: #62DB54;
+  font-size: 48px;
+  line-height: 56px;
+  padding: 0 8px;
+  position: absolute;
+  top: -28px;
+  left: 40px;
+}
+.class-card{
+  position: relative;
+  border-radius: 24px;
+  background-color: $grayBg;
+  &:hover::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    border-radius: 24px;
+    border: 2px solid #62DB54;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+  }
+  &-body{
+    border-bottom: 1px solid #C1C1C1;
+    padding: 24px 32px 32px 32px;
+    img{
+      display: block;
+      margin: 0 auto;
+      width: 100px;
+      height: 100px;
+    }
+  }
+  &-footer{
+    padding: 16px 32px;
+  }
+}
+.feature-img{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  &::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background-color: #1C1C1C;
+    opacity: 90%;
+    width: 100%;
+    height: 100%;
+  }
+  &:hover{
+    &::before{
+      opacity: 12%;
+    }
+    .feature-img-content{
+      span{
+        color: #62DB54;
+        opacity: 1;
+      }
+      p{
+        opacity: 1;
+      }
+    }
+    .h-deco3::after{
+      background-color: $primary;
+    }
+  }
+  &-content{
+    position: relative;
+    padding: 40px 0px;
+    text-align: center;
+    span{
+      width: 32px;
+      height: 32px;
+      color: #62DB54;
+    }
+    p{
+      opacity: 50%;
+    }
+    @include pad{
+      padding: 216px 0px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      span{
+        color: $white;
+        opacity: 0.5;
+      }
+    }
+  }
+  &-1{
+    background-image: url(../images/info01.jpg);
+  }
+  &-2{
+    background-image: url(../images/info02.jpg);
+  }
+  &-3{
+    background-image: url(../images/info03.jpg);
+  }
+  &-4{
+    background-image: url(../images/info04.jpg);
+  }
+}
+.article-card{
+  @include pad{
+    &:hover{
+      .border-deco-1{
+        border-top: 1px solid $primary;
+        border-left: 1px solid $primary;
+        border-top-left-radius: 12px;
+      }
+      .border-deco-2{
+        border-top: 1px solid $primary;
+        border-right: 1px solid $primary;
+        border-top-right-radius: 12px;
+      }
+      .border-deco-3{
+        border-bottom: 1px solid $primary;
+        border-left: 1px solid $primary;
+        border-bottom-left-radius: 12px;
+      }
+      .border-deco-4{
+        border-bottom: 1px solid $primary;
+        border-right: 1px solid $primary;
+        border-bottom-right-radius: 12px;
+      }
+    }
+  }
+}
+.border-deco{
+  position: absolute;
+  width: 32px;
+  height: 32px;
+}
+.p-slide{
+  padding: 16px 0px;
+  text-align: center;
+  border: 1px solid $white;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  @include pad{
+    font-size: 18px;
+    line-height: 26px;
+    padding: 24px 0px;
+  }
+}
+
+//share
+.share{
+  background-image: url('../images/bg_share.jpg');
+  height: 733px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include pad{
+    height: auto;
+  }
+}
+// swiper
+.swiper{
+  width: 100%;
+  height: auto;
+  @include pad{
+    height: 429px;
+  }
+  &-img{
+    position: relative;
+    top: 0;
+    left: 6px;
+    width: calc(100% - 6px);
+    height: 213px;
+    margin-bottom: 45px;
+    @include pad{
+      position: absolute;
+      top: 0;
+      left: 10px;
+      width: 61.3317%;  // 525除以856
+      height: 88.8111%;      // 381除以429
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit:cover;
+      border-radius: 24px;
+    }
+    &::before{
+      position: absolute;
+      top: 6px;
+      left: -6px;
+      content: "";
+      width: 100%;
+      height: 100%;
+      border: 1px solid #7C7E77;
+      border-radius: 24px;
+      z-index: -1;
+      @include pad{
+        top: 10px;
+        left: -10px;
+      }
+    }
+  }
+  .share-card{
+    width: 100%;
+    color: #494755;
+    position: relative;
+    border-radius: 24px 24px 24px 0;
+    background-color: $white;
+    padding: 24px;
+    @include pad{
+      width: 48.5981%;      // 416除以856
+      //height: 41.4918%;     // 178除以429
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      padding: 32px;
+    }
+    &-img{
+      object-fit: cover;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      position: absolute;
+      right: 24px;
+      top: -30px;
+      @include pad{
+        width: 100px;
+        height: 100px;
+        right: 32px;
+        top: 0;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &-button-next, &-button-prev {
+    position: unset;
+    width: 24px;
+    height: 24px;
+    margin-top: 0;
+    color: #62DB54;
+    // 原本的箭頭是用偽元素 content: 'next' 這個是swiper icon，所以用空白把他刪除
+    &::after{
+      content: '';
+    }
+  }
+  // 要覆蓋需要權重
+  .swiper-pagination {
+    position: unset;
+    width: auto;
+    &-bullet {
+      background-color: #62DB54;
+      opacity: initial;
+      &-active {
+        width: 16px;
+        border-radius: 100px;
+      }
+    }
+  }
+
+  &-buttons {
+    position: unset;
+    margin-top: 32px;
+    @include pad{
+      position: absolute;
+      bottom: 0;
+      left: 30%;
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+  }
+}

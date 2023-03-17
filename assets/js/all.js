@@ -8,7 +8,7 @@ $(document).ready(function () {
     $('.btn-buger').toggleClass('open');
     $('.menu-mobile').toggleClass('open');
   });
-}); // Initialize Swiper
+}); // mySwiper
 
 var swiper = new Swiper(".mySwiper", {
   autoplay: {
@@ -28,9 +28,9 @@ var swiper = new Swiper(".mySwiper", {
       spaceBetween: 16
     }
   }
-}); // Swiper
+}); // mySwiper2
 
-var swiper2 = new Swiper('.swiper', {
+var swiper2 = new Swiper('.mySwiper2', {
   // Optional parameters
   effect: 'fade',
   fadeEffect: {

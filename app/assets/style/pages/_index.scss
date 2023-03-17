@@ -331,13 +331,13 @@
   }
 }
 // swiper
-.swiper{
+.mySwiper2{
   width: 100%;
   height: auto;
   @include pad{
     height: 429px;
   }
-  &-img{
+  .swiper-img{
     position: relative;
     top: 0;
     left: 6px;
@@ -406,7 +406,7 @@
     }
   }
 
-  &-button-next, &-button-prev {
+  .swiper-button-next, .swiper-button-prev {
     position: unset;
     width: 24px;
     height: 24px;
@@ -431,7 +431,7 @@
     }
   }
 
-  &-buttons {
+  .swiper-buttons {
     position: unset;
     margin-top: 32px;
     @include pad{

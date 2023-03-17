@@ -9,7 +9,7 @@ $(document).ready(() => {
   })
 })
 
-// Initialize Swiper
+// mySwiper
 var swiper = new Swiper(".mySwiper", {
   autoplay: {
     delay: 5000,
@@ -27,8 +27,8 @@ var swiper = new Swiper(".mySwiper", {
   }
 });
 
-// Swiper
-const swiper2 = new Swiper('.swiper', {
+// mySwiper2
+const swiper2 = new Swiper('.mySwiper2', {
   // Optional parameters
   effect: 'fade',
   fadeEffect: {

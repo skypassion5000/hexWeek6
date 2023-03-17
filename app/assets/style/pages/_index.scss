@@ -321,13 +321,13 @@
 
 //share
 .share{
-  background-image: url('../images/bg_share.jpg');
-  height: 733px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-color: $black;
   @include pad{
+    background-image: url('../images/bg_share.jpg');
     height: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 }
 // swiper
@@ -440,6 +440,41 @@
       left: 30%;
       transform: translateX(-50%);
       z-index: 10;
+    }
+  }
+}
+
+// joinUs
+.joinUs{
+  background-color: $black;
+  color: $white;
+  &-bg{
+    background-color: #202020;
+    border-radius: 24px;
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include pad{
+      width: 89.7769%;
+      padding: 48px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  span{
+    font-size: 103px;
+  }
+  h4{
+    @include pad{
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+  p{
+    @include pad{
+      font-size: 18px;
+      line-height: 26px;
     }
   }
 }
